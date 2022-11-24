@@ -1,0 +1,17 @@
+#!/bin/bash
+sudo su
+yum update -y
+yum install java-11 -y
+wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
+tar -zvxf apache-tomcat-8.5.82.tar.gz
+/home/ec2-user/apache-tomcat-8.5.82/bin/startup.sh
+
+
+
+##################################################################
+# Command to move the Index files and deploy in HTTPD HTML
+    >mv /home/ec2-user/Sample_html/* /var/www/html/
+
+# This is called as apache2 in Ubuntu and called as httpd in Amazon Linux
+
+##############################################################################
